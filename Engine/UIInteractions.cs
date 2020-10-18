@@ -7,6 +7,9 @@ namespace Engine
 {
     public static class UIInteractions
     {
+        /// <summary>
+        /// Displays the game introduction.
+        /// </summary>
         public static void ShowWelcomeScreen()
         {
             Console.ForegroundColor = ConsoleColor.White;
@@ -26,6 +29,9 @@ namespace Engine
             Console.Clear();
         }
 
+        /// <summary>
+        /// Displays the main menu and incorporates basic interactions.
+        /// </summary>
         public static void ShowMainMenu()
         {
             Console.ForegroundColor = ConsoleColor.White;
@@ -65,22 +71,24 @@ namespace Engine
                     TextDisplay.WriteText("I'm sorry, mate, I didn't understand ye.\n", 20);
                 }
             }
-         
         }
 
+        /// <summary>
+        /// Gets the main menu selection from the user and returns it to the main menu.
+        /// </summary>
+        /// <returns>User Input for main menu</returns>
         private static string GetMenuSelection()
         {
             Console.WriteLine("------------------------------------------------------------");
-            Console.WriteLine("(S)tart a new game");
-            Console.WriteLine("(C)ontinue a saved game");
-            Console.WriteLine("(D)elete a saved game");
+            Console.WriteLine("(S)tart a new adventure");
+            Console.WriteLine("(C)ontinue a saved adventure");
+            Console.WriteLine("(D)elete a saved adventure");
             Console.WriteLine("(Q)uit the game");
             Console.WriteLine("------------------------------------------------------------");
             Console.Write("Please enter your selection -> ");
             var input = Console.ReadLine();
             
             return input;
-
         }
     }
 }
