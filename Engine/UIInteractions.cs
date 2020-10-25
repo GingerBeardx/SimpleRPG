@@ -35,6 +35,7 @@ namespace Engine
         /// </summary>
         public static void ShowMainMenu()
         {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("------------------------------------------------------------");
             Console.ForegroundColor = ConsoleColor.Red;
@@ -51,7 +52,7 @@ namespace Engine
                 if (selection.ToLower() == "s" || selection.ToLower() == "start")
                 {
                     PlayerFactory.CreatePlayer();
-                    continue;
+                    ShowMainMenu();
                 }
                 else if (selection.ToLower() == "c" || selection.ToLower() == "continue")
                 {

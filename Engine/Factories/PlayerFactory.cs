@@ -4,6 +4,10 @@ namespace Engine.Factories
 {
     public static class PlayerFactory
     {
+        /// <summary>
+        /// Creates a new player
+        /// </summary>
+        /// <returns>New Player Object</returns>
         public static Player CreatePlayer()
         {
             Console.Clear();
