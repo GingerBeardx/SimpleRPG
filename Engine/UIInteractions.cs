@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Engine.Factories;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -34,6 +35,7 @@ namespace Engine
         /// </summary>
         public static void ShowMainMenu()
         {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("------------------------------------------------------------");
             Console.ForegroundColor = ConsoleColor.Red;
@@ -49,7 +51,8 @@ namespace Engine
 
                 if (selection.ToLower() == "s" || selection.ToLower() == "start")
                 {
-                    continue;
+                    PlayerFactory.CreatePlayer();
+                    ShowMainMenu();
                 }
                 else if (selection.ToLower() == "c" || selection.ToLower() == "continue")
                 {
@@ -61,7 +64,7 @@ namespace Engine
                 }
                 else if (selection.ToLower() == "q" || selection.ToLower() == "quit")
                 {
-                    TextDisplay.WriteText("Farewell, Adventurer!", 30);
+                    TextDisplay.WriteText("Oh! I'm sorry ta see ye go. Farewell, Adventurer!", 30);
                     Thread.Sleep(3000);
                     Environment.Exit(0);
                 }
