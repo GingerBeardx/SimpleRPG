@@ -2,13 +2,13 @@
 {
     public class Player
     {
-        public string Name { get; set; }
-        public string Gender { get; set; }
-        public int Health { get; set; }
-        public int Strength { get; set; }
-        public int Stamina { get; set; }
-        public int Charm { get; set; }
-        public bool IsDead { get; set; } = false;
+        public string Name { get; private set; }
+        public string Gender { get; private set; }
+        public int Health { get; private set; }
+        public int Strength { get; private set; }
+        public int Stamina { get; private set; }
+        public int Charm { get; private set; }
+        public bool IsDead { get; private set; } = false;
 
         public Player(string name, string gender, int health,
             int strength, int stamina, int charm)

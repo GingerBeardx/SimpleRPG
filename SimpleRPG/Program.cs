@@ -1,5 +1,6 @@
 ﻿using Engine;
 using System;
+using System.Collections.Generic;
 
 namespace SimpleRPG
 {
@@ -7,8 +8,8 @@ namespace SimpleRPG
     {
         static void Main(string[] args)
         {
-            UIInteractions.ShowWelcomeScreen();
-            UIInteractions.ShowMainMenu();
+            //UIInteractions.ShowWelcomeScreen();
+            //UIInteractions.ShowMainMenu();
         }
     }
 }
